@@ -5,7 +5,8 @@
 #include "Flow.hpp"
 #include "Geometry.hpp"
 #include "SupportMaterial.hpp"
-#include "GCode/WipeTowerPrusaMM.hpp"
+//#include "GCode/WipeTowerPrusaMM.hpp"
+#include "GCode/WipeTowerPrometheus.hpp"
 #include <algorithm>
 #include <unordered_set>
 #include <boost/filesystem.hpp>
@@ -970,7 +971,7 @@ void Print::_make_wipe_tower()
         return;
 
     // Initialize the wipe tower.
-    WipeTowerPrusaMM wipe_tower(
+    WipeTowerPrometheus wipe_tower(
         float(this->config.wipe_tower_x.value),     float(this->config.wipe_tower_y.value), 
         float(this->config.wipe_tower_width.value), float(this->config.wipe_tower_per_color_wipe.value),
         initial_extruder_id);
@@ -983,7 +984,7 @@ void Print::_make_wipe_tower()
     for (size_t i = 0; i < 4; ++ i)
         wipe_tower.set_extruder(
             i, 
-            WipeTowerPrusaMM::parse_material(this->config.filament_type.get_at(i).c_str()),
+            WipeTowerPrometheus::parse_material(this->config.filament_type.get_at(i).c_str()),
             this->config.temperature.get_at(i),
             this->config.first_layer_temperature.get_at(i));
 

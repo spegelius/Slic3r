@@ -2,7 +2,8 @@
 #include "ExtrusionEntity.hpp"
 #include "EdgeGrid.hpp"
 #include "Geometry.hpp"
-#include "GCode/WipeTowerPrusaMM.hpp"
+//#include "GCode/WipeTowerPrusaMM.hpp"
+#include "GCode/WipeTowerPrometheus.hpp"
 
 #include <algorithm>
 #include <cstdlib>

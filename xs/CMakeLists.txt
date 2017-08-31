@@ -87,8 +87,8 @@ add_library(libslic3r STATIC
     ${LIBDIR}/libslic3r/GCode/ToolOrdering.cpp
     ${LIBDIR}/libslic3r/GCode/ToolOrdering.hpp
     ${LIBDIR}/libslic3r/GCode/WipeTower.hpp
-    ${LIBDIR}/libslic3r/GCode/WipeTowerPrusaMM.cpp
-    ${LIBDIR}/libslic3r/GCode/WipeTowerPrusaMM.hpp
+    ${LIBDIR}/libslic3r/GCode/WipeTowerPrometheus.cpp
+    ${LIBDIR}/libslic3r/GCode/WipeTowerPrometheus.hpp
     ${LIBDIR}/libslic3r/GCode.cpp
     ${LIBDIR}/libslic3r/GCode.hpp
     ${LIBDIR}/libslic3r/GCodeReader.cpp
