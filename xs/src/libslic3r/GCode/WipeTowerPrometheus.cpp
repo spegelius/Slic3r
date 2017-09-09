@@ -596,9 +596,9 @@ void WipeTowerPrometheus::toolchange_Unload(
 	case ABS:
    		// ramming          start                    end                  y increment     amount feedrate
 		writer.ram(xl + m_perimeter_width * 2, xr - m_perimeter_width,     y_step * 0.2f, 0,  2.2f * e,  4000)
-			  .ram(xr - m_perimeter_width,     xl + m_perimeter_width,     y_step * 1.7f, e0, 2.6f * e,  4600)
-			  .ram(xl + m_perimeter_width * 2, xr - m_perimeter_width * 2, y_step * 1.7f, e0, 2.8f * e,  5000)
-			  .ram(xr - m_perimeter_width * 2, xl + m_perimeter_width * 2, y_step * 1.7f, e0, 2.8f * e,  5000);
+			  .ram(xr - m_perimeter_width,     xl + m_perimeter_width,     y_step * 1.9f, e0, 2.6f * e,  4600)
+			  .ram(xl + m_perimeter_width * 2, xr - m_perimeter_width * 2, y_step * 1.9f, e0, 2.8f * e,  5000)
+			  .ram(xr - m_perimeter_width * 2, xl + m_perimeter_width * 2, y_step * 1.9f, e0, 2.8f * e,  5000);
 		break;
 	case PVA:
 		writer.ram(xl + m_perimeter_width * 2, xr - m_perimeter_width,     y_step * 0.2f, 0,  3,     4000)
@@ -613,9 +613,8 @@ void WipeTowerPrometheus::toolchange_Unload(
 		break;
 	default:
 		writer.ram(xl + m_perimeter_width * 2, xr - m_perimeter_width,     y_step * 0.2f, 0,  2.6f  * e, 4000)
-			  .ram(xr - m_perimeter_width,     xl + m_perimeter_width,     y_step * 1.7f, e0, 2.65f * e, 4600)
-			  .ram(xl + m_perimeter_width * 2, xr - m_perimeter_width * 2, y_step * 1.7f, e0, 2.74f * e, 5200)
-                          .ram(xr - m_perimeter_width * 2, xl + m_perimeter_width * 2, y_step * 1.7f, e0, 2.8f * e, 6000);
+			  .ram(xr - m_perimeter_width,     xl + m_perimeter_width,     y_step * 1.9f, e0, 2.65f * e, 5200)
+			  .ram(xl + m_perimeter_width * 2, xr - m_perimeter_width * 2, y_step * 1.9f, e0, 2.74f * e, 6000);
 	}
 
 	// Pull the filament end into a cooling tube.
